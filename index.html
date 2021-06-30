@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Random quote</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<!-- <link rel="stylesheet" href="./css/home.css"> -->
+</head>
+
+<body>
+	<!-- main containter -->
+	<main class="mainly">
+		<!-- main meading and logo -->
+		<header id="mainHeader" class="hide">
+			<section class="logoName">
+				<img class="logo" src="./img/logo.svg" alt="open and close quote characters" height="">
+				<h1 class="title"><span>Random</span><span>quotes</span></h1>
+			</section>
+			<div id="dropdownUser" class="dropdownUser">
+				<button type="button" value="userIcon" class="userIcon"></button>
+				<div class="detailsDrop hide">
+					<p class="signedAs">
+						<span>User name</span><span>rcortes1708.rcj@gmail.com</span>
+					</p>
+					<button type="button" value="signOut" class="signOut">Sign out</button>
+				</div>
+			</div>
+		</header>
+
+		<!-- :::::: section to generate random quote and create own quotes :::::: -->
+		<div id="subcontainer" class="hide">
+			<div class="quotewraper">
+				<section id="quote-stion" class="quote-stion dispGrid">
+					<!-- Section to generate the quote -->
+					<section class="generate">
+						<header class="quoteHeader">
+							<!-- container for supportedlanguages  -->
+							<div class=selectContainer>
+								<label class="select-label">Laguage</label>
+								<!-- list of supported language  -->
+								<select class="lang-quote" name="lang-quote" id="lang-quote">
+								</select>
+							</div>
+							<!-- button to generate random quotes -->
+							<div class="inspiredBorder">
+								<div class="tooltipbody ">
+									<button type="button" value="generateBtn" class="generateBtn btnInactive"></button>
+									<span class="tooltipSpan" id="tooltipGetBtn">Get inspired</span>
+								</div>
+							</div>
+							<!-- button to create own quotes -->
+							<div class="tooltipbody">
+								<button type="button" value="createyoursBtn"
+									class="createyoursBtn btnInactive"></button>
+								<span class="tooltipSpan" id="tooltipMakeBtn">Make quotes</span>
+							</div>
+
+						</header>
+						<footer class="quoteFooter">
+							<!-- Button to save quote  -->
+							<div class="tooltipbody">
+								<button type="button" value="saveQuoteBtn" id="saveQuoteBtn" class="saveQuoteBtn"
+									disabled></button>
+								<span class="tooltipSpan" id="tooltipSaveBtn">Save quotes</span>
+							</div>
+							<!-- Message when the quote is saved -->
+							<div id="alert" class="alert">
+								<span>&check;</span><span>Saved</span>
+							</div>
+						</footer>
+					</section>
+
+					<!-- Section to display the result of random quotes -->
+					<blockquote id="result" class="result">
+						<!-- quote picture background  -->
+						<img class="quoteSymbol" src="./img/openquotes.svg" alt="Open quote" height="38">
+						<!-- Welcoming message -->
+						<p id="welcome" class="quoteText">Welcome to random quotes</p>
+						<!-- Content for the quote -->
+						<p id="quoteText" class="quoteText hide"><span class="q-open"></span><span
+								id="insertQuote"></span><span class="q-close"></span></p>
+						<!-- Cite the author-->
+						<footer class="author"><cite class="cite"></cite></footer>
+					</blockquote>
+					<!-- Form to capture information to create quotes -->
+					<form id="form-CreateQuote" class="hide">
+						<!-- capture quote text -->
+						<div class="container-CreateQuote">
+							<div class=title-clearForm>
+								<label class="label-create">Write your quote</label>
+								<div class="tooltipbody">
+									<button type="button" value="clearForm" id="clearForm" class="clearForm"></button>
+									<span class="tooltipSpan" id="tooltipClearForm">"Clear form"</span>
+								</div>
+							</div>
+							<textarea class="yourtext" name="" cols="30" rows="10"
+								placeholder="&#42; Write your quote here..."></textarea>
+						</div>
+						<!-- capture author name -->
+						<div class="container-CreateQuote">
+							<label class="label-create">Your name</label>
+							<input type=" text" name="" class="yourname" placeholder="&#42; Enter your name here...">
+						</div>
+					</form>
+				</section>
+			</div>
+
+
+			<!-- :::::: Container for historical section :::::: -->
+			<section id="histo-stion" class="histo-stion hide">
+				<!-- historical heading and  closing button -->
+				<header class=histoHeader>
+					<h2 class="histoHeading">History</h2>
+					<button type="button" value="closeHistoBtn" id="closeHistoBtn" class="closeHistoBtn"></button>
+				</header>
+				<!-- Filter section -->
+				<section class="Filters">
+					<!-- display the number of elements in the result -->
+					<div class="qtyResults">
+						<span id="spanQtyResults">0 Results</span>
+					</div>
+					<div class="selectContainer">
+						<!-- order by filter -->
+						<label class="select-label">Order by</label>
+						<select disabled class="orderBy" name="orderBy" id="orderBy">
+							<option value="id">Id</option>
+							<option value="author">Author</option>
+						</select>
+					</div>
+				</section>
+				<!-- message when the history record is empty -->
+				<section id="itsEmpty" class="itsEmpty">
+					<img src="./img/noquotes.svg" alt="message indicatin no quotes">
+					<p>No quotes saved</p>
+				</section>
+				<!-- Display saved quotes -->
+				<section class="historicalResult">
+					<!-- populate saved quotes -->
+				</section>
+			</section>
+		</div>
+		<!-- button to open History container -->
+		<div id="openHistoContainer" class="hide">
+			<button id="openHistoBtn" class="openHistoBtn"></button>
+			<labelc id="histolabel" class="histolabel">History</label>
+		</div>
+		<section id="userloginsection" class="userloginsection">
+			<div class="div-container">
+				<header class="quoteHeader">
+					<section class="logoName">
+						<img class="logo" src="./img/logo.svg" alt="open and close quote characters" height="">
+						<h1 class="title"><span>Random</span><span>quotes</span></h1>
+					</section>
+
+
+
+				</header>
+				<div class="div-body">
+					<div class="div-logo">
+						<button class="btn-logo">
+							<img src="img/logo.svg" alt="" class="btn-logo-container">
+						</button>
+					</div>
+
+					<div id="containerSignIn" class="containerSignIn">
+						<form action="" class="form-login">
+							<p><label for="username">Username:
+									<input type="text" class="username" required>
+								</label>
+							</p>
+							<p>
+								<label for="password">Password:
+									<input type="password" class="password" required>
+								</label>
+							</p>
+							<div class="button-box">
+								<input type="submit" value="Login" class="signIn">
+								<input type="submit" value="Sign Up" class="signUp">
+							</div>
+						</form>
+					</div>
+					<div id="containerSignUp" class="hide">
+						<form action="" class="form-createAcc">
+							<p>
+								<label for="firstname">First Name:
+									<input type="text" class="firstname" required>
+								</label>
+							</p>
+							<p>
+								<label for="lastname">Last Name:
+									<input type="text" class="lastname" required>
+								</label>
+							</p>
+							<p>
+								<label for="email">Email:
+									<input type="email" class="password" required>
+								</label>
+							</p>
+							<p><label for="username">Username:
+									<input type="text" class="username" required>
+								</label>
+							</p>
+							<p>
+								<label for="password">Password:
+									<input type="password" class="password" required>
+								</label>
+							</p>
+							<div class="button-box">
+								<input type="submit" value="Create Account" class="createAcc" id="signIn">
+								<input type="submit" value="Login" class="login" id="login">
+							</div>
+						</form>
+					</div>
+
+				</div>
+				
+			</div>
+
+		</section>
+	</main>
+	<script src="./js/script.js"></script>
+	<!-- <script src="./scripts.js"></script>##################### -->
+</body>
+
+</html>
