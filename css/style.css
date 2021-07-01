@@ -569,6 +569,17 @@ html{
 	margin-top: -3em;
 }
 
+.accCreate-alert span {
+	/* display: none; */
+	text-align: right;
+	margin:.5em;
+	padding: .3em;
+	background-color: rgb(129, 250, 135);
+	border-radius: 5px;
+	border: .2px solid gray;
+	color: rgb(44, 95, 21);
+}
+
 /* checkmark icon */
 .alert span:first-child{
 	color: rgb(138, 248, 138);

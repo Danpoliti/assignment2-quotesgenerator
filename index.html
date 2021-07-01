@@ -167,38 +167,7 @@
 
 					<div id="containerSignIn" class="containerSignIn">
 						<form action="" class="form-login">
-							<p><label for="username">Username:
-									<input type="text" class="username">
-								</label>
-							</p>
-							<p>
-								<label for="password">Password:
-									<input type="password" class="password">
-								</label>
-							</p>
-							<div class="button-box">
-								<input type="button" value="Login" class="signIn">
-								<input type="button" value="Sign Up" class="signUp">
-							</div>
-						</form>
-					</div>
-					<div id="containerSignUp" class="hide">
-						<form action="" class="form-createAcc">
-							<p>
-								<label for="firstname">First Name:
-									<input type="text" class="firstname" required>
-								</label>
-							</p>
-							<p>
-								<label for="lastname">Last Name:
-									<input type="text" class="lastname" required>
-								</label>
-							</p>
-							<p>
-								<label for="email">Email:
-									<input type="email" class="password" required>
-								</label>
-							</p>
+							<div class="accCreate-alert hide"><span>Your account was sucessfully created!</span></div>
 							<p><label for="username">Username:
 									<input type="text" class="username" required>
 								</label>
@@ -209,8 +178,41 @@
 								</label>
 							</p>
 							<div class="button-box">
+								<input type="button" value="Login" class="signIn">
+								<input type="button" value="Sign Up" class="signUp">
+							</div>
+						</form>
+					</div>
+					<div id="containerSignUp" class="hide">
+						<form action="" class="form-createAcc" id="formSignUp" >
+							<p>
+								<label for="firstname">First Name:
+									<input type="text" class="firstname" id="firstName" required>
+								</label>
+							</p>
+							<p>
+								<label for="lastname">Last Name:
+									<input type="text" class="lastname" id="lastName" required>
+								</label>
+							</p>
+							<p>
+								<label for="email">Email:
+									<input type="email" class="email" id="email" required>
+								</label>
+							</p>
+							<p><label for="username">Username:
+									<input type="text" class="username" id="userName" required>
+								</label>
+							</p>
+							<p>
+								<label for="password">Password:
+									<input type="password" class="password" id="password" required>
+								</label>
+							</p>
+							<div class="button-box">
+								<input type="button" value="Cancel" class="login" id="cancel">
 								<input type="button" value="Create Account" class="createAcc" id="signIn">
-								<input type="button" value="Login" class="login" id="login">
+								
 							</div>
 						</form>
 					</div>
