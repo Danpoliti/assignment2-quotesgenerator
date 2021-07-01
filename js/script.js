@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	const spanQtyResults = document.querySelector(`#spanQtyResults`)
 	const detailsDrop = document.querySelector(`.detailsDrop`)
 	const subcontainer = document.querySelector(`#subcontainer`)
-		// ======================DANIEL UPDATES=============================================
+	// ======================DANIEL UPDATES=============================================
 	const containerSignUp = document.querySelector(`#containerSignUp`)
 	const containerSignIn = document.querySelector(`#containerSignIn`)
-		// ======================DANIEL UPDATES=============================================
+	// ======================DANIEL UPDATES=============================================
 
 	const openHistoContainer = document.querySelector(`#openHistoContainer`)
 	const userloginsection = document.querySelector(`#userloginsection`)
@@ -531,40 +531,74 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		containerSignUp.classList.remove(`containerSignUp`)
 		containerSignIn.classList.add(`containerSignIn`)
-		
-		document.getElementById('formSignUp').reset(); 
+
+		document.getElementById('formSignUp').reset();
 	}
 
 	// ======================DANIEL UPDATES=============================================
-	function createAccount(e){
+	function createAccount(e) {
 		e.preventDefault();
-		
+
 		const firstName = document.getElementById('firstName').value;
 		const lastName = document.getElementById('lastName').value;
 		const email = document.getElementById('email').value;
 		const userName = document.getElementById('userName').value;
 		const password = document.getElementById('password').value;
 
-		console.log(`First Name: ${firstName}`)
-		console.log(`Last Name: ${lastName}`)
-		console.log(`Email: ${email}`)
-		console.log(`Username: ${userName}`)
-		console.log(`Password: ${password}`)
-	
+		if (firstName.trim() != "" && lastName.trim() != "" && email.trim() != "" && userName.trim() != "" && password.trim() != "") {
+			let accountData = {
+				firstName: firstName,
+				lastName: lastName,
+				Email: email,
+				Username: userName,
+				Password: password
+			}
+
+			console.log(`First Name: ${firstName}`)
+			console.log(`Last Name: ${lastName}`)
+			console.log(`Email: ${email}`)
+			console.log(`Username: ${userName}`)
+			console.log(`Password: ${password}`)
+			// submit the data using POST method
+
+			console.log(`saved`)
+
+			hidesignUpSection();
+
+			document.querySelector('.accCreate-alert').style.display = 'block';
+
+			//Hide alert after 3 seconds
+			setTimeout(function () {
+				document.querySelector('.accCreate-alert').style.display = 'none';
+			}, 3000);
+
+		} else {
+			document.querySelector(`.firstname`).classList.add(`alertFieldEmpty`)
+			document.querySelector(`.lastname`).classList.add(`alertFieldEmpty`)
+			document.querySelector(`.email`).classList.add(`alertFieldEmpty`)
+			document.querySelector(`#userName`).classList.add(`alertFieldEmpty`)
+			document.querySelector(`#password`).classList.add(`alertFieldEmpty`)
+
+			setTimeout(function () {
+				document.querySelector(`.firstname`).classList.remove(`alertFieldEmpty`)
+				document.querySelector(`.lastname`).classList.remove(`alertFieldEmpty`)
+				document.querySelector(`.email`).classList.remove(`alertFieldEmpty`)
+				document.querySelector(`#userName`).classList.remove(`alertFieldEmpty`)
+				document.querySelector(`#password`).classList.remove(`alertFieldEmpty`)
+			}, 3000);
+
+		}
+
+
+
+
 		//save message
 		// saveData(firstName, lastName, email, userName, password);
-	
+
 		//show alert
 		// const accCreateAlert = document.querySelector('.accCreate-alert');
-	
-	  hidesignUpSection();
 
-	  document.querySelector('.accCreate-alert').style.display = 'block';
-	
-	  //Hide alert after 3 seconds
-	  setTimeout(function(){
-		  document.querySelector('.accCreate-alert').style.display = 'none';
-	  },3000);
+
 
 
 	}
@@ -573,7 +607,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// function getInputVal(id){
 	// 	return document.getElementById(id).value;
 	// }
- 
+
 	// hide sign in and sign out section
 	// display quote and history section
 	function hidesignUserSection() {
@@ -619,7 +653,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	document.querySelector(`.userIcon`).addEventListener(`click`, toggleSignout)
 	document.querySelector(`.signOut`).addEventListener(`click`, displaysignUserSection)
 	document.querySelector(`.signIn`).addEventListener(`click`, hidesignUserSection)
-		// ======================DANIEL UPDATES=============================================
+	// ======================DANIEL UPDATES=============================================
 
 	document.querySelector(`.signUp`).addEventListener(`click`, displaysignUpSection)
 	document.querySelector(`#cancel`).addEventListener(`click`, hidesignUpSection)
