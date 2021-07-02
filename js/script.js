@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	const spanQtyResults = document.querySelector(`#spanQtyResults`)
 	const detailsDrop = document.querySelector(`.detailsDrop`)
 	const subcontainer = document.querySelector(`#subcontainer`)
-	// ======================DANIEL UPDATES=============================================
+	// ======================DANIEL UPDATES STARTS=============================================
 	const containerSignUp = document.querySelector(`#containerSignUp`)
 	const containerSignIn = document.querySelector(`#containerSignIn`)
-	// ======================DANIEL UPDATES=============================================
+	// ======================DANIEL UPDATES ENDS=============================================
 
 	const openHistoContainer = document.querySelector(`#openHistoContainer`)
 	const userloginsection = document.querySelector(`#userloginsection`)
@@ -561,7 +561,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			console.log(`Password: ${password}`)
 			// submit the data using POST method
 
-			console.log(`saved`)
+			console.log(`Account created successfully!`)
 
 			hidesignUpSection();
 
@@ -602,11 +602,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 	}
-	// ======================DANIEL UPDATES=============================================
+// ===================================================================================
 
-	// function getInputVal(id){
-	// 	return document.getElementById(id).value;
-	// }
+
 
 	// hide sign in and sign out section
 	// display quote and history section

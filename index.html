@@ -148,7 +148,9 @@
 			<labelc id="histolabel" class="histolabel">History</label>
 		</div>
 		<section id="userloginsection" class="userloginsection">
-<!-- ============== DANIEL UPDATES ============== -->
+<!-- START ============== DANIEL UPDATES ============== -->
+
+			<!--Header with the logo - small size  -->
 			<div class="div-container">
 				<header class="quoteHeader">
 					<section class="logoName">
@@ -159,16 +161,21 @@
 
 
 				</header>
+				<!-- Container to the main logo and login/signup forms -->
 				<div class="div-body">
+					<!-- Animated logo container -->
 					<div class="div-logo">
 						<button class="btn-logo">
 							<img src="img/logo.svg" alt="" class="btn-logo-container">
 						</button>
 					</div>
-
+					<!-- Login form -->
 					<div id="containerSignIn" class="containerSignIn">
 						<form action="" class="form-login">
+							<!-- Hidden alert message: Account created! -->
 							<div class="accCreate-alert hide"><span>Your account was sucessfully created!</span></div>
+							<!-- Hidden alert message: Invalid credentials! -->
+							<div class="invalidCredentials-alert hide"><span>Login/password does not exist/match!</span></div>
 							<p><label for="username">Username:
 									<input type="text" class="username" required>
 								</label>
@@ -184,6 +191,7 @@
 							</div>
 						</form>
 					</div>
+					<!-- Sign Up form -->
 					<div id="containerSignUp" class="hide">
 						<form action="" class="form-createAcc" id="formSignUp" >
 							<p>
@@ -221,12 +229,12 @@
 				</div>
 				
 			</div>
-<!-- ============== DANIEL UPDATES ============== -->
+<!-- END  ============== DANIEL UPDATES ============== -->
 
 		</section>
 	</main>
 	<script src="./js/script.js"></script>
-	<!-- <script src="./scripts.js"></script>##################### -->
+	<!-- <script src="./scripts.js"></script>##################### DELETE THIS, because this directory doesnt really exist-->
 </body>
 
 </html>

@@ -1,12 +1,14 @@
-
 /* :::::::::::::::::::::::::::FONTS :::::::::::::::::::::::::::::::::::::::: */
+
 /* font-family: 'Overpass', sans-serif; */
+
 @import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@700&display=swap');
 /* font-family: 'Courgette', cursive; */
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 /* :::::::::::::::::::::::::::RESETS :::::::::::::::::::::::::::::::::::::::: */
+
 html, body {
 	height: 100%;
 	box-sizing: border-box;
@@ -14,76 +16,84 @@ html, body {
 
 body {
 	min-height: 100vh;
-  	margin:0; 
-	background: rgb(196,231,226);
-	background: linear-gradient(229deg, 
-	rgba(196,231,226,1) 0%, rgba(223,196,231,1) 47%, 
-	rgba(196,225,231,1) 65%);
+	margin: 0;
+	background: rgb(196, 231, 226);
+	background: linear-gradient(229deg, rgba(196, 231, 226, 1) 0%, rgba(223, 196, 231, 1) 47%, rgba(196, 225, 231, 1) 65%);
 	background-repeat: no-repeat;
-    background-attachment: fixed;
-
+	background-attachment: fixed;
 }
 
 *, *::before, *::after {
 	box-sizing: inherit;
 }
 
-
-
 * {
-  font-size: 1em;
-  font-weight: 400;
-  text-decoration: none;
-  line-height: 1.2; 
-  margin: 0;
-  padding:0;  
+	font-size: 1em;
+	font-weight: 400;
+	text-decoration: none;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
 }
 
-ul, ol { 
+ul, ol {
 	list-style-type: none;
 }
-  
-img{
+
+img {
 	max-width: 100%;
 	width: auto;
 	height: auto;
 	vertical-align: bottom;
 }
 
-
 /* =================VARIABLES==================*/
-html{
-	
-	--fOver:Overpass, sans-serif;  /* Common font */
-	--fCgette:Courgette, cursive; /* font for quote result */
-	--pad-gap:1em; /* paddings and gaps */
-}
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-.form-login, .form-createAcc {
-	background-image: linear-gradient(229deg, 
-	rgb(215, 228, 226) 0%, rgb(232, 206, 240) 47%, 
-	rgb(212, 228, 231) 65%);
-    height: 100%;
-    padding-top: 3em;
-    padding-left: 1em;
-    padding-right: 1em;
-	padding-bottom: 2em;
-    border-radius: 15px;
-    box-shadow: 1px 1px 5px rgb(141, 111, 121);
-    margin-top: 3em;
-}
-.btn-logo-container {
-	width: 100%;
-    height: 100%;
-}
-.btn-logo {background-image:linear-gradient(-45deg, #e7a28d, #e07da3, #76b7cf, #68d6bd,#7e87d8);
-	animation: gradient 9s ease infinite;
 
+html {
+	--fOver: Overpass, sans-serif;
+	/* Common font */
+	--fCgette: Courgette, cursive;
+	/* font for quote result */
+	--pad-gap: 1em;
+	/* paddings and gaps */
 }
+
+/* ############################################################# */
+
+/* ############################################################# */
+
+/* ###############DANIEL UPDATES STARTS######################### */
+
+/* ############################################################# */
+
+/* ############################################################# */
+
+/* Login and Sing Up for style */
+
+.form-login, .form-createAcc {
+	background-image: linear-gradient(229deg, rgb(215, 228, 226) 0%, rgb(232, 206, 240) 47%, rgb(212, 228, 231) 65%);
+	border-radius: 15px;
+	box-shadow: 1px 1px 5px rgb(141, 111, 121);
+	height: 100%;
+	margin-top: 3em;
+	padding-top: 3em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 2em;
+}
+
+/* ====== Main Logo animation and style ====== */
+
+.btn-logo-container {
+	height: 100%;
+	width: 100%;
+}
+
+.btn-logo {
+	background-image: linear-gradient(-45deg, #e7a28d, #e07da3, #76b7cf, #68d6bd, #7e87d8);
+	animation: gradient 9s ease infinite;
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -95,158 +105,159 @@ html{
 		background-position: 0% 50%;
 	}
 }
-.btn-logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-   margin: auto;
-   padding: 15px 45px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border: none;
 
-   display: block;
- }
- /* .btn-logo:hover {
-   background-position: right center; 
-   color: #fff;
-   text-decoration: none;
- } */
- .div-container {
-    border: 1px solid rgb(149, 125, 151);
-    padding-bottom: 10em;
-    margin-top: 1em;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px rgb(194, 193, 193);
+.btn-logo {
+	background-size: 200% auto;
+	border-radius: 50%;
+	box-shadow: 0 0 20px #eee;
+	border: none;
+	color: white;
+	display: block;
+	height: 150px;
+	margin: auto;
+	padding: 15px 45px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	width: 150px;
 }
+
 .div-logo {
 	display: flex;
-	/* grid-area: logo; */
-	text-align: center;
 	margin: auto;
 	margin-top: 1em;
-	/* margin-left: 6.5em; */
+	text-align: center;
 }
+
+/* Maing logo and login/SignUp forms container */
+
+.div-container {
+	border: 1px solid rgb(149, 125, 151);
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px rgb(194, 193, 193);
+	margin-top: 1em;
+	padding-bottom: 10em;
+}
+
 .containerSignIn {
 	grid-area: login;
-	text-align: center;
 	margin: auto;
-	/* margin-right: 8em; */
+	text-align: center;
 }
 
 .containerSignIn p {
 	text-align: right;
-	margin:.5em;
+	margin: .5em;
 	padding: .3em;
 	background-color: rgb(224, 223, 223);
 	border-radius: 5px;
 	border: .2px solid gray;
 	color: rgb(3, 3, 3);
 }
+
 .containerSignUp {
-   grid-area: login;
-   text-align: center;
-   margin: auto;
-   /* margin-right: 8em; */
+	grid-area: login;
+	text-align: center;
+	margin: auto;
+	/* margin-right: 8em; */
 }
 
 .containerSignUp p {
-   text-align: right;
-   margin:.5em;
-   padding: .3em;
-   background-color: rgb(224, 223, 223);
-   border-radius: 5px;
-   border: .2px solid gray;
-   color: rgb(3, 3, 3);
+	text-align: right;
+	margin: .5em;
+	padding: .3em;
+	background-color: rgb(224, 223, 223);
+	border-radius: 5px;
+	border: .2px solid gray;
+	color: rgb(3, 3, 3);
 }
+
 .div-body {
 	display: flex;
 	flex-direction: column;
-	/* grid-template-columns: 1fr;
-	grid-template-areas: "logo" "login"; */
-	/* margin: 15%; */
-}
-.header-logo {
-	display: flex;
 }
 
 .signIn, .signUp, .createAcc, .login {
 	padding: 3px 15px;
-	margin:.5em;
+	margin: .5em;
 	border-radius: 6px;
 	background-image: linear-gradient(rgb(189, 189, 189), rgb(170, 170, 170), rgb(230, 230, 230));
-
 }
 
-.signIn:active, .signUp:active, .createAcc:active, .login:active{
-    background-image: linear-gradient(rgb(155, 155, 155), rgb(236, 236, 236), rgb(172, 172, 172));
- }
+.signIn:active, .signUp:active, .createAcc:active, .login:active {
+	background-image: linear-gradient(rgb(155, 155, 155), rgb(236, 236, 236), rgb(172, 172, 172));
+}
 
+/* ############################################################# */
 
 /* ############################################################# */
+
+/* ###############DANIEL UPDATES ENDS########################### */
+
 /* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
+
 /* ############################################################# */
 
 /* class to hide elements */
-.hide{
+
+.hide {
 	display: none;
 }
 
-.flexx{
+.flexx {
 	display: flex;
 }
 
-
 /* =================MAIN CONTAINER=========================== */
-.mainly{
+
+.mainly {
 	display: grid;
-	grid-template-columns:1fr;
-	color:rgb(90, 90, 90);
+	grid-template-columns: 1fr;
+	color: rgb(90, 90, 90);
 	font-size: 1em;
 	font-weight: bold;
 	font-family: var(--fOver);
 }
+
 /* All children inherit font properties */
-.mainly *{
-	color:inherit;
+
+.mainly * {
+	color: inherit;
 	font-size: inherit;
 	font-weight: inherit;
 	font-family: inherit;
 }
 
 /* Toggle grid property of quote section and history section */
-.dispGrid{
+
+.dispGrid {
 	display: grid;
 }
 
-
 /* ---- header for logo and text logo--------*/
-.mainHeader{
+
+.mainHeader {
 	display: flex;
 	justify-content: space-between;
 	padding: var(--pad-gap) calc(var(--pad-gap)/2);
 }
 
-.logoName{
+.logoName {
 	display: flex;
 	align-items: center;
 	gap: var(--pad-gap);
-	}
+}
+
 /* picture logo */
-.logo{
+
+.logo {
 	width: 2em;
 	height: auto;
-	
 }
-	
+
 /* text logo */
-.title{
+
+.title {
 	display: flex;
 	color: rgb(49, 49, 49);
 	font-size: 1.3em;
@@ -254,83 +265,78 @@ html{
 	gap: calc(var(--pad-gap)/8);
 }
 
-.title span:first-child{
+.title span:first-child {
 	color: rgb(121, 141, 144);
 }
 
-.title span:last-child{
-	color:#B290C2;
+.title span:last-child {
+	color: #B290C2;
 }
 
 /* ----------------------- */
 
-.dropdownUser{
+.dropdownUser {
 	display: flex;
-	position: relative;	
+	position: relative;
 }
 
-.userIcon{
+.userIcon {
 	background: url("../img/usericon.svg");
 	background-repeat: no-repeat;
 	width: 1.7em;
-	height:1.7em;
+	height: 1.7em;
 	cursor: pointer;
 	border: none;
 	border-radius: 0.5em;
 	object-fit: cover;
 	background-position: center;
 	background-size: 1.3em 1.3em;
-	background-color:rgba(255, 255, 255, 0.104);
+	background-color: rgba(255, 255, 255, 0.104);
 }
 
-
-.userIcon:hover{
-	background-color:rgba(255, 255, 255, 0.304);
+.userIcon:hover {
+	background-color: rgba(255, 255, 255, 0.304);
 }
 
-
-.detailsDrop{
+.detailsDrop {
 	flex-direction: column;
 	align-items: center;
 	flex-grow: 1;
 	gap: var(--pad-gap);
 	padding: calc(var(--pad-gap));
-	border:0.02em solid rgb(201, 201, 201);
-	box-shadow: -1px 1px 9px 0px rgba(0,0,0,0.3);
+	border: 0.02em solid rgb(201, 201, 201);
+	box-shadow: -1px 1px 9px 0px rgba(0, 0, 0, 0.3);
 	border-radius: 0.5em;
 	position: absolute;
 	top: 100%;
 	right: 0;
 	margin-top: calc(var(--pad-gap)/2);
-	
 	z-index: 1;
-	
 	background-color: #ebebeb;
 	min-width: 8em;
-	
 }
 
-.signedAs{
+.signedAs {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: calc(var(--pad-gap)/2);
 	padding-bottom: var(--pad-gap);
-	border-bottom: 0.02em solid rgb(201, 201, 201);	
+	border-bottom: 0.02em solid rgb(201, 201, 201);
 	font-size: 0.7em;
 }
 
-.signedAs span:first-child{
+.signedAs span:first-child {
 	color: rgb(0, 0, 0);
 	font-weight: bolder;
 }
-.signedAs span:last-child{
+
+.signedAs span:last-child {
 	color: rgb(100, 100, 100);
 	font-weight: lighter;
-	
 }
 
-.signOut{
+.signOut {
 	padding: calc(var(--pad-gap)/4) calc(var(--pad-gap)/2) calc(var(--pad-gap)/4) calc(var(--pad-gap));
 	width: fit-content;
 	align-self: center;
@@ -346,64 +352,69 @@ html{
 	color: rgb(83, 83, 83);
 	opacity: 0.7;
 	margin-top: var(--pad-gap);
-	
 }
 
-.signOut:hover{
+.signOut:hover {
 	opacity: 1;
 }
 
 /* ----------------------------------------------- */
+
 /* subcontainer for quote section and history section */
-.subcontainer{
+
+.subcontainer {
 	display: grid;
-	grid-template-columns:1fr;
+	grid-template-columns: 1fr;
 }
 
 /* container for quote section */
-.quotewraper{
+
+.quotewraper {
 	flex-grow: 3 1 100%;
-
 }
-	
-/* ----------Container for quote generator section-------- */
-.quote-stion{
-	gap: var(--pad-gap);
 
+/* ----------Container for quote generator section-------- */
+
+.quote-stion {
+	gap: var(--pad-gap);
 }
 
 /* Quote section and history section */
-.quote-stion, .histo-stion{
-	color:inherit;
+
+.quote-stion, .histo-stion {
+	color: inherit;
 	font-size: inherit;
 	font-weight: bold;
 	background-color: rgba(255, 255, 255, 0.356);
-	box-shadow: 0 -7px 12px -5px rgba(0,0,0,0.2);
-	
+	box-shadow: 0 -7px 12px -5px rgba(0, 0, 0, 0.2);
 }
 
 /* ----------------------------------------------- */
+
 /* -------Section to generate the quote ----- */
-.generate{
+
+.generate {
 	display: flex;
 	justify-content: space-between;
-    gap: var(--pad-gap);
+	gap: var(--pad-gap);
 	align-items: center;
-	padding:  calc(var(--pad-gap)*1) calc(var(--pad-gap)*1);
+	padding: calc(var(--pad-gap)*1) calc(var(--pad-gap)*1);
 	background-color: rgba(0, 0, 0, 0.089);
-	border-bottom: 0.05em solid rgb(201, 201, 201); 
-}	
+	border-bottom: 0.05em solid rgb(201, 201, 201);
+}
+
 /*--------------- quote header */
-.quoteHeader{
+
+.quoteHeader {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: calc(var(--pad-gap));
-
 }
 
 /* container for languages supported */
-.selectContainer{
+
+.selectContainer {
 	display: flex;
 	flex-direction: column;
 	align-content: center;
@@ -412,28 +423,34 @@ html{
 }
 
 /* label for  languages supported */
-.select-label{
+
+.select-label {
 	font-weight: bold;
 	font-size: 0.8em;
 	padding-left: calc(var(--pad-gap)/4);
 }
 
 /* list of languages supported */
-.lang-quote, .lang-historial, .orderBy{
+
+.lang-quote, .lang-historial, .orderBy {
 	background-color: transparent;
-	outline:none ;
-	border:none;
-    border-bottom: 0.2em solid rgb(163, 163, 163) ;
+	outline: none;
+	border: none;
+	border-bottom: 0.2em solid rgb(163, 163, 163);
 	font-size: 0.9em;
 }
 
 /* Commont tooltip for buttons */
+
 /* tooltip body */
-.tooltipbody{
+
+.tooltipbody {
 	position: relative;
 }
+
 /* tooltip text */
-.tooltipSpan{
+
+.tooltipSpan {
 	display: none;
 	width: 7em;
 	background-color: rgba(0, 0, 0, 0.842);
@@ -448,42 +465,44 @@ html{
 	top: 100%;
 	left: 50%;
 	margin-left: -3.5em;
-  	transition: 0.5s;
+	transition: 0.5s;
 }
- 
-.inspiredBorder{
-	border-right:0.02em solid rgb(163, 163, 163);
+
+.inspiredBorder {
+	border-right: 0.02em solid rgb(163, 163, 163);
 	height: 2em;
 	padding-right: var(--pad-gap);
 	display: flex;
 }
 
 /* Button to generate random quote (to get inspired) */
-.generateBtn{
+
+.generateBtn {
 	background: url("../img/getInspiredHover.svg");
 	background-repeat: no-repeat;
 	width: 1.7em;
-	height:1.7em;
+	height: 1.7em;
 	cursor: pointer;
 	border: none;
 	border-radius: 0.5em;
 	object-fit: cover;
 	background-position: center;
 	background-size: 1.3em 1.3em;
-
 }
 
 /* Button to generate random quote when hover */
-.generateBtn:hover{
-	background-color:rgba(255, 255, 255, 0.304);
+
+.generateBtn:hover {
+	background-color: rgba(255, 255, 255, 0.304);
 }
 
 /* Button to display form to creater own quotes */
-.createyoursBtn{
+
+.createyoursBtn {
 	background: url("../img/createyoursHover.svg");
 	background-repeat: no-repeat;
 	width: 1.7em;
-	height:1.7em;
+	height: 1.7em;
 	cursor: pointer;
 	border: none;
 	border-radius: 0.5em;
@@ -491,26 +510,29 @@ html{
 	background-position: center;
 	background-size: 1.3em 1.3em;
 }
+
 /* Button to display form to creater own quotes when hover */
-.createyoursBtn:hover{
-	background-color:rgba(255, 255, 255, 0.304);
+
+.createyoursBtn:hover {
+	background-color: rgba(255, 255, 255, 0.304);
 }
 
 /* Button to indicate which button is active */
-.btnActive{
-	background-color:rgba(255, 255, 255, 0.404);
+
+.btnActive {
+	background-color: rgba(255, 255, 255, 0.404);
 }
 
 /* Button to indicate which button is inactive */
-.btnInactive{
-	background-color:transparent;
+
+.btnInactive {
+	background-color: transparent;
 	opacity: 0.7;
 }
 
-
-
 /* --------quote footer */
-.quoteFooter{
+
+.quoteFooter {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -518,41 +540,45 @@ html{
 }
 
 /* save quote button */
-.saveQuoteBtn{
+
+.saveQuoteBtn {
 	background: url("../img/saveHover.svg");
 	background-repeat: no-repeat;
 	width: 1.7em;
-	height:1.7em;			
+	height: 1.7em;
 	cursor: pointer;
 	border: none;
 	border-radius: 0.5em;
 	object-fit: cover;
 	background-position: center;
-	background-size: 1.3em 1.3em;	
+	background-size: 1.3em 1.3em;
 }
 
 /* save quote button when hover */
-.saveQuoteBtn:hover{
-	background-color:rgba(255, 255, 255, 0.304);
+
+.saveQuoteBtn:hover {
+	background-color: rgba(255, 255, 255, 0.304);
 }
 
 /* save quote button when disabled */
-.saveQuoteBtn:disabled{
+
+.saveQuoteBtn:disabled {
 	opacity: 0.4;
 	cursor: none;
 	background: url("../img/save.svg");
 	background-repeat: no-repeat;
 	width: 1.7em;
-	height:1.7em;
+	height: 1.7em;
 	border: none;
 	border-radius: 0.5em;
 	object-fit: cover;
 	background-position: center;
-	background-size: 1.3em 1.3em;	
+	background-size: 1.3em 1.3em;
 }
 
 /* container for alert message  when the quote is saved */
-.alert{
+
+.alert {
 	display: none;
 	flex-direction: column;
 	position: absolute;
@@ -564,15 +590,15 @@ html{
 	flex: 1 1 auto;
 	top: 100%;
 	left: 50%;
-	width:3em;
+	width: 3em;
 	margin-left: -1.5em;
 	margin-top: -3em;
 }
 
 .accCreate-alert span {
-	/* display: none; */
+	display: flex;
 	text-align: right;
-	margin:.5em;
+	margin: .5em;
 	padding: .3em;
 	background-color: rgb(129, 250, 135);
 	border-radius: 5px;
@@ -580,20 +606,29 @@ html{
 	color: rgb(44, 95, 21);
 }
 
+.invalidCredentials-alert span {
+	display: flex;
+	text-align: center;
+	margin: .5em;
+	padding: .3em;
+	background-color: rgb(250, 157, 129);
+	border-radius: 5px;
+	border: .2px solid gray;
+	color: rgb(95, 42, 21);
+}
+
 /* checkmark icon */
-.alert span:first-child{
+
+.alert span:first-child {
 	color: rgb(138, 248, 138);
-	text-shadow:
-	-2px -2px 2px #333333,
-	-2px 2px 2px #333333,
-	 2px -2px 2px #333333,
-	 2px 2px 2px #333333;
+	text-shadow: -2px -2px 2px #333333, -2px 2px 2px #333333, 2px -2px 2px #333333, 2px 2px 2px #333333;
 	font-weight: bold;
 	font-size: 1.3em;
 }
 
 /* saved message  */
-.alert span:last-child{
+
+.alert span:last-child {
 	color: rgb(138, 248, 138);
 	font-size: 0.7em;
 	background-color: black;
@@ -602,82 +637,83 @@ html{
 	border-radius: 4em;
 }
 
-
-
 /* ----Section to display result of Random quotes (to get inspired) ----- */
-.result{
+
+.result {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-areas: 
-	"qote"
-	"cite";
+	grid-template-areas: "qote" "cite";
 	justify-content: center;
 	align-items: center;
-	padding: 0  calc(var(--pad-gap)*1) calc(var(--pad-gap)*1)  calc(var(--pad-gap)*1);
-
+	padding: 0 calc(var(--pad-gap)*1) calc(var(--pad-gap)*1) calc(var(--pad-gap)*1);
 }
 
 /* quote picture bg */
-.quoteSymbol{
+
+.quoteSymbol {
 	grid-area: qote;
 	width: auto;
 	max-height: 5em;
-} 
-
+}
 
 /* text content of the quote */
-.quoteText{
+
+.quoteText {
 	grid-area: qote;
 	font-size: 1.2em;
 	font-family: var(--fCgette);
 	height: auto;
-	max-width:60em;
-	flex:0 1 100%;
+	max-width: 60em;
+	flex: 0 1 100%;
 	line-height: 2;
 	text-align: center;
-	justify-self:center ;
+	justify-self: center;
 }
 
 /* open quote */
-.q-open{
+
+.q-open {
 	padding-right: calc(var(--pad-gap)/2);
 	font-size: 1.8em;
 }
 
 /* close quote */
-.q-close{
+
+.q-close {
 	padding-left: calc(var(--pad-gap)/2);
 	font-size: 1.8em;
 }
 
 /*------------ footer of the quotation -------------*/
-.author{
+
+.author {
 	display: flex;
 	justify-content: center;
 	padding: 0 var(--pad-gap);
 }
 
 /* cite for the author */
-.cite{
-	padding-top:calc(var(--pad-gap)*2);
-	border-top:0.2em solid rgb(207, 46, 46) ;
+
+.cite {
+	padding-top: calc(var(--pad-gap)*2);
+	border-top: 0.2em solid rgb(207, 46, 46);
 	width: 60%;
 	text-align: center;
 	font-size: 1.4em;
 }
 
-
 /* Form to capture information to create own quotes  */
-.form-CreateQuote{
+
+.form-CreateQuote {
 	display: grid;
 	justify-content: center;
 	grid-template-columns: 1fr;
 	gap: var(--pad-gap);
-	padding: 0  calc(var(--pad-gap)*1) calc(var(--pad-gap)*1)  calc(var(--pad-gap)*1);
-		
+	padding: 0 calc(var(--pad-gap)*1) calc(var(--pad-gap)*1) calc(var(--pad-gap)*1);
 }
 
 /* container for labels and inputs  */
+
 .container-CreateQuote {
 	display: flex;
 	flex-direction: column;
@@ -685,18 +721,20 @@ html{
 }
 
 /* container for subheading and clear form button  */
-.title-clearForm{
+
+.title-clearForm {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
 /* clear form button  */
-.clearForm{
+
+.clearForm {
 	background: url("../img/clearForm.svg");
 	background-repeat: no-repeat;
 	width: 1.7em;
-	height:1.7em;
+	height: 1.7em;
 	cursor: pointer;
 	border: none;
 	border-radius: 0.5em;
@@ -706,18 +744,21 @@ html{
 }
 
 /* clear form button:hover  */
-.clearForm:hover{
-	background-color:rgba(255, 255, 255, 0.304);
+
+.clearForm:hover {
+	background-color: rgba(255, 255, 255, 0.304);
 }
 
 /* subheading */
-.label-create{
+
+.label-create {
 	color: rgb(128, 128, 128);
 	font-size: 0.9em;
 }
 
 /* text area to write own quote  */
-.yourtext{
+
+.yourtext {
 	flex-wrap: 1;
 	width: 100%;
 	padding: var(--pad-gap);
@@ -731,19 +772,22 @@ html{
 }
 
 /* text area to write own quote when hover  */
-.yourtext:hover{
+
+.yourtext:hover {
 	background-color: rgba(255, 255, 255, 0.257);
 	outline: none;
 }
 
 /* text area to write own quote when focus  */
-.yourtext:focus{
+
+.yourtext:focus {
 	background-color: rgba(255, 255, 255, 0.809);
 	outline: none;
 }
 
 /* input to enter the name  */
-.yourname{
+
+.yourname {
 	flex-wrap: 1;
 	width: 100%;
 	padding: var(--pad-gap);
@@ -754,60 +798,66 @@ html{
 }
 
 /* input to enter the name when hover  */
-.yourname:hover{
+
+.yourname:hover {
 	background-color: rgba(255, 255, 255, 0.257);
 	outline: none;
 }
 
 /* input to enter the name when focus  */
-.yourname:focus{
+
+.yourname:focus {
 	background-color: rgba(255, 255, 255, 0.809);
 	outline: none;
 }
 
 /* default place holder for text area and input field  */
-.yourtext::placeholder, .yourname::placeholder{
-	color:  rgb(144, 144, 144);
+
+.yourtext::placeholder, .yourname::placeholder {
+	color: rgb(144, 144, 144);
 	font-size: 0.8em;
 }
 
 /* alert message when text area and input field are empty  */
-.alertFieldEmpty::placeholder{
+
+.alertFieldEmpty::placeholder {
 	color: rgb(245, 41, 41);
 	font-size: 0.9em;
 }
 
-
-
 /* =================HISTORICAL SECTION=========================== */
+
 /* -----------Container for historical section -------- */
-.histo-stion{
-flex: 1 1 auto;
-align-content: flex-start;
-min-height: 95vh;
+
+.histo-stion {
+	flex: 1 1 auto;
+	align-content: flex-start;
+	min-height: 95vh;
 }
 
-
 /* Historical header for subheading and closing button */
-.histoHeader{
-display: flex;
-align-items: center;
-padding: var(--pad-gap);
-justify-content: space-between;
-background-color: rgba(0, 0, 0, 0.089); 
+
+.histoHeader {
+	display: flex;
+	align-items: center;
+	padding: var(--pad-gap);
+	justify-content: space-between;
+	background-color: rgba(0, 0, 0, 0.089);
 }
 
 /* subheading for History  */
-.histoHeading{
+
+.histoHeading {
 	font-weight: bold;
 }
 
 /* Button to close history section  */
-.closeHistoBtn{
+
+.closeHistoBtn {
 	background: url("../img/closeBtn.svg");
 	background-repeat: no-repeat;
 	width: 2em;
-	height:2em;
+	height: 2em;
 	cursor: pointer;
 	border: none;
 	border-radius: 0.5em;
@@ -818,30 +868,33 @@ background-color: rgba(0, 0, 0, 0.089);
 }
 
 /* Button to close history section when hover  */
-.closeHistoBtn:hover{
-	background-color:rgba(255, 255, 255, 0.304);
+
+.closeHistoBtn:hover {
+	background-color: rgba(255, 255, 255, 0.304);
 }
 
 /* container for history filters  */
-.Filters{
+
+.Filters {
 	display: flex;
 	justify-content: space-between;
 	gap: calc(var(--pad-gap)*2);
 	align-items: flex-end;
 	padding: 0 var(--pad-gap) var(--pad-gap) var(--pad-gap);
 	background-color: rgba(0, 0, 0, 0.089);
-	border-bottom: 0.05em solid rgb(201, 201, 201); 
+	border-bottom: 0.05em solid rgb(201, 201, 201);
 }
 
 /* display the number of elements in the result */
-.qtyResults span{
-	color:  rgb(151, 151, 151);
+
+.qtyResults span {
+	color: rgb(151, 151, 151);
 	font-size: 0.8em;
-	
 }
 
 /* container for message when history is empty  */
-.itsEmpty{
+
+.itsEmpty {
 	display: grid;
 	padding: calc(var(--pad-gap)*5) var(--pad-gap);
 	gap: var(--pad-gap);
@@ -849,59 +902,65 @@ background-color: rgba(0, 0, 0, 0.089);
 	align-items: center;
 }
 
-
 /* ------------------------- */
+
 /* container to display history of saved quotes  */
+
 .historicalResult {
 	display: grid;
 	max-height: 75vh;
 	overflow: auto;
 }
 
-
 /* container of the quote saved  */
-.historyItem{
+
+.historyItem {
 	display: grid;
-	grid-template-columns: 1fr;	
+	grid-template-columns: 1fr;
 	padding: var(--pad-gap);
 	border-bottom: 0.05em solid rgb(201, 201, 201);
 }
 
 /*firt child of the container of the quote saved  */
-.historyItem:first-child{
-    border-top: 0.05em solid rgb(201, 201, 201); 
+
+.historyItem:first-child {
+	border-top: 0.05em solid rgb(201, 201, 201);
 }
 
 /*container of the quote saved when hover */
+
 .historyItem:hover {
 	background-color: rgba(255, 255, 255, 0.253);
 }
 
 /* header of the item saved  */
 
-.historyItem-header{
+.historyItem-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
 }
 
 /* footer of the item saved  */
-.historyItem-footer{
+
+.historyItem-footer {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: calc(var(--pad-gap)/2);
 }
 
 /* id of the quote saved  */
-.quoteID{
-	color: rgb(71, 71, 71);;
+
+.quoteID {
+	color: rgb(71, 71, 71);
+	;
 	font-size: 0.8em;
 	flex-grow: 1;
 }
 
 /* text of the quote saved  */
-.quoteRowTxt{
+
+.quoteRowTxt {
 	display: flex;
 	color: rgb(110, 110, 110);
 	font-size: 0.9em;
@@ -909,16 +968,18 @@ background-color: rgba(0, 0, 0, 0.089);
 }
 
 /* author of the quote saved  */
-.quoteRowAuthor{
+
+.quoteRowAuthor {
 	font-size: 0.8em;
 }
 
 /* button to delete quote saved  */
-.deleteRowQuote{
+
+.deleteRowQuote {
 	background: url("../img/delete.svg");
 	background-repeat: no-repeat;
 	width: 2em;
-	height:1.9em;
+	height: 1.9em;
 	cursor: pointer;
 	border: none;
 	border-radius: 0.5em;
@@ -928,16 +989,18 @@ background-color: rgba(0, 0, 0, 0.089);
 }
 
 /* button to delete quote saved when hover */
+
 .deleteRowQuote:hover {
-	background-color:rgba(134, 134, 134, 0.157);
+	background-color: rgba(134, 134, 134, 0.157);
 }
 
 /* button to see quote saved  */
-.seeRowQuote{
+
+.seeRowQuote {
 	background: url("../img/seeQuote.svg");
 	background-repeat: no-repeat;
 	width: 2em;
-	height:1.9em;
+	height: 1.9em;
 	cursor: pointer;
 	border: none;
 	border-radius: 0.5em;
@@ -947,15 +1010,16 @@ background-color: rgba(0, 0, 0, 0.089);
 }
 
 /* button to see quote saved when hover */
+
 .seeRowQuote:hover {
-	background-color:rgba(134, 134, 134, 0.157);
+	background-color: rgba(134, 134, 134, 0.157);
 }
 
-
-
 /* --------------------------------- */
+
 /* container for button to open history section */
-.openHistoContainer{
+
+.openHistoContainer {
 	display: flex;
 	flex-direction: column;
 	gap: var(--pad-gap);
@@ -964,14 +1028,13 @@ background-color: rgba(0, 0, 0, 0.089);
 	padding: calc(var(--pad-gap)*2) var(--pad-gap);
 }
 
-
-
 /* open hitory button */
-.openHistoBtn{
+
+.openHistoBtn {
 	background: url("../img/historyBtn.svg");
 	background-repeat: no-repeat;
 	width: 6em;
-	height:6em ;
+	height: 6em;
 	cursor: pointer;
 	border: none;
 	object-fit: cover;
@@ -980,70 +1043,63 @@ background-color: rgba(0, 0, 0, 0.089);
 }
 
 /* open hitory button when hover */
-.openHistoBtn:hover{
+
+.openHistoBtn:hover {
 	background: url("../img/historyBtnHover.svg");
 	background-repeat: no-repeat;
 	object-fit: cover;
 	background-position: center;
 	background-size: 5.5em 5.5em;
 	border-radius: 50%;
-	background-color:rgba(255, 255, 255, 0.304);
-	
+	background-color: rgba(255, 255, 255, 0.304);
 }
 
 /* open hitory label*/
-.histolabel{
-	color:#898989;
+
+.histolabel {
+	color: #898989;
 }
 
 /* open hitory label when hover */
-.openHistoBtn:hover + .histolabel{
+
+.openHistoBtn:hover+.histolabel {
 	color: #A385AF;
 }
-
 
 /* 
 .userloginsection{
 	text-align: center;
 } */
 
-
-
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::MEDIA QUERY::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 @media screen and (min-width: 25em) {
-
 	/* list of languages supported and order by */
-	.lang-quote, .lang-historial, .orderBy{
+	.lang-quote, .lang-historial, .orderBy {
 		padding-right: var(--pad-gap);
 	}
-
 	/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-
+	/* ############################################################# */
+	/* #############DANIEL UPDATES STARTS########################### */
+	/* ############################################################# */
+	/* ############################################################# */
 	.btn-logo {
 		width: 180px;
 		height: 180px;
-
-	 }
-
-	 /* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-
+	}
+	/* ############################################################# */
+	/* ############################################################# */
+	/* ############DANIEL UPDATES ENDS############################## */
+	/* ############################################################# */
+	/* ############################################################# */
 	/* Button to generate random quote (to get inspired) */
-	.generateBtn{
+	.generateBtn {
 		background: url("../img/getInspiredHover.svg");
 		background-repeat: no-repeat;
 		width: 1.9em;
-		height:1.9em;
+		height: 1.9em;
 		cursor: pointer;
 		border: none;
 		border-radius: 0.5em;
@@ -1051,14 +1107,12 @@ background-color: rgba(0, 0, 0, 0.089);
 		background-position: center;
 		background-size: 1.5em 1.5em;
 	}
-		
-		
-	/* Button to display form to creater own quotes */	
-	.createyoursBtn{
+	/* Button to display form to creater own quotes */
+	.createyoursBtn {
 		background: url("../img/createyoursHover.svg");
 		background-repeat: no-repeat;
 		width: 1.9em;
-		height:1.9em;
+		height: 1.9em;
 		cursor: pointer;
 		border: none;
 		border-radius: 0.5em;
@@ -1066,13 +1120,12 @@ background-color: rgba(0, 0, 0, 0.089);
 		background-position: center center;
 		background-size: 1.5em 1.5em;
 	}
-
 	/* save quote button */
-	.saveQuoteBtn{
+	.saveQuoteBtn {
 		background: url("../img/saveHover.svg");
 		background-repeat: no-repeat;
 		width: 1.9em;
-		height:1.9em;
+		height: 1.9em;
 		cursor: pointer;
 		border: none;
 		border-radius: 0.5em;
@@ -1080,43 +1133,37 @@ background-color: rgba(0, 0, 0, 0.089);
 		background-position: center;
 		background-size: 1.5em 1.5em;
 	}
-
-
-	.saveQuoteBtn:disabled{
+	.saveQuoteBtn:disabled {
 		opacity: 0.4;
 		cursor: none;
 		background: url("../img/save.svg");
 		background-repeat: no-repeat;
 		width: 1.9em;
-		height:1.9em;
+		height: 1.9em;
 		border: none;
 		border-radius: 0.5em;
 		object-fit: cover;
 		background-position: center;
 		background-size: 1.5em 1.5em;
 	}
-
 	/* container for languages supported */
-	.selectContainer{
+	.selectContainer {
 		gap: calc(var(--pad-gap)/2);
 	}
-		
 	/* Button to indicate which button is active */
-	.btnActive{
-		background-color:rgba(255, 255, 255, 0.404);
+	.btnActive {
+		background-color: rgba(255, 255, 255, 0.404);
 	}
-	
 	/* Button to indicate which button is inactive */
-	.btnInactive{
-		background-color:transparent;
+	.btnInactive {
+		background-color: transparent;
 		opacity: 0.7;
 	}
-
-	.clearForm{
+	.clearForm {
 		background: url("../img/clearForm.svg");
 		background-repeat: no-repeat;
 		width: 1.9em;
-		height:1.9em;
+		height: 1.9em;
 		cursor: pointer;
 		border: none;
 		border-radius: 0.5em;
@@ -1124,168 +1171,147 @@ background-color: rgba(0, 0, 0, 0.089);
 		background-position: center;
 		background-size: 1.5em 1.5em;
 	}
-
-	.userIcon{
+	.userIcon {
 		background: url("../img/usericon.svg");
 		background-repeat: no-repeat;
 		width: 1.8em;
-		height:1.8em;
+		height: 1.8em;
 		cursor: pointer;
 		border: none;
 		border-radius: 0.5em;
 		object-fit: cover;
 		background-position: center;
 		background-size: 1.4em 1.4em;
-		background-color:rgba(255, 255, 255, 0.104);
+		background-color: rgba(255, 255, 255, 0.104);
 	}
-
 }
-
-
 
 @media screen and (min-width: 50em) {
-
-html {
-	font-size: 1.1em;
-}
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-
-.btn-logo {
-	width: 220px;
-	height: 220px;
-
- }
- .div-logo{
-	 margin:auto;
-	 margin-right: 0;
- }
- .containerSignIn, .containerSignUp {
-	 margin: auto;
- }
- .form-login, .form-createAcc {
-	 margin:0;
- }
- .div-body {
-	display: grid;
-	/* flex-direction: column; */
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-areas: "logo login login";
-	/* margin: 15%; */
-	margin-top: 5em;
-}
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-
+	html {
+		font-size: 1.1em;
+	}
+	/* ############################################################# */
+	/* ############################################################# */
+	/* ############DANIEL UPDATES STARTS############################ */
+	/* ############################################################# */
+	/* ############################################################# */
+	/* Login page - Main logo resizing */
+	.btn-logo {
+		width: 220px;
+		height: 220px;
+	}
+	.div-logo {
+		margin: auto;
+		margin-right: 0;
+	}
+	.containerSignIn, .containerSignUp {
+		margin: auto;
+	}
+	.form-login, .form-createAcc {
+		margin: 0;
+	}
+	/* Logo and Login/Signup container grid */
+	.div-body {
+		display: grid;
+		/* flex-direction: column; */
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas: "logo login login";
+		/* margin: 15%; */
+		margin-top: 5em;
+	}
+	/* ############################################################# */
+	/* ############################################################# */
+	/* ##########DANIEL UPDATES ENDS################################ */
+	/* ############################################################# */
+	/* ############################################################# */
 	/* =========MAIN CONTAINER================ */
 	.mainly {
 		width: 99%;
 		justify-content: flex-end;
 		margin: 0 auto;
 		box-shadow: none;
-  	}
-
-	/* subcontainer for quote section and history section */
-	.subcontainer{
-		grid-template-columns: 2fr 1fr;
-		gap:0;
 	}
-
+	/* subcontainer for quote section and history section */
+	.subcontainer {
+		grid-template-columns: 2fr 1fr;
+		gap: 0;
+	}
 	/* container for quote section */
-	.quotewraper{
+	.quotewraper {
 		padding: 0 calc(var(--pad-gap)*5) 0 0;
 	}
-
 	/* Quote section and history section */
-	.quote-stion, .histo-stion{
-		box-shadow: 1px 1px 6px 3px rgba(0,0,0,0.2);
+	.quote-stion, .histo-stion {
+		box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.2);
 	}
-
 	/* ---- header for logo and text logo--------*/
 	/* .mainHeader{
 		padding: var(--pad-gap) calc(var(--pad-gap)*5);			
 	} */
-
 	/* history section  */
- 	.histo-stion{
+	.histo-stion {
 		display: grid
 	}
- 	/* quote section  */
-  	.quote-stion{
+	/* quote section  */
+	.quote-stion {
 		display: grid
- 	}
-	
-
+	}
 	/* container for button to open history section */
-	.openHistoContainer, .histolabel, .closeHistoBtn{
+	.openHistoContainer, .histolabel, .closeHistoBtn {
 		display: none;
 	}
-
-	.quoteHeader{
+	.quoteHeader {
 		gap: calc(var(--pad-gap)*2);
 	}
-
-	.inspiredBorder{
+	.inspiredBorder {
 		padding-right: calc(var(--pad-gap)*2);
 	}
-
-	
-		/* -------Section to generate the quote ----- */
-	.generate{
-		padding:  calc(var(--pad-gap)*1) calc(var(--pad-gap)*2);
+	/* -------Section to generate the quote ----- */
+	.generate {
+		padding: calc(var(--pad-gap)*1) calc(var(--pad-gap)*2);
 	}
-
 	/* ----Section to display result of Random quotes (to get inspired) ----- */
-	.result{
-		padding: 0  calc(var(--pad-gap)*2) calc(var(--pad-gap)*2)  calc(var(--pad-gap)*2);
-	}	
-
-	/* Form to capture information to create own quotes  */
-	.form-CreateQuote{	
-		padding: 0  calc(var(--pad-gap)*2) calc(var(--pad-gap)*2)  calc(var(--pad-gap)*2);			
+	.result {
+		padding: 0 calc(var(--pad-gap)*2) calc(var(--pad-gap)*2) calc(var(--pad-gap)*2);
 	}
-			
+	/* Form to capture information to create own quotes  */
+	.form-CreateQuote {
+		padding: 0 calc(var(--pad-gap)*2) calc(var(--pad-gap)*2) calc(var(--pad-gap)*2);
+	}
 }
 
 @media screen and (min-width: 75em) {
-
 	/* =========MAIN CONTAINER============= */
-	.mainly{
+	.mainly {
 		width: 70em;
 		justify-content: flex-end;
 		margin: 0 auto;
 	}
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
+	/* ############################################################# */
+	/* ############################################################# */
+	/* ###########DANIEL UPDATES STARTS############################# */
+	/* ############################################################# */
+	/* ############################################################# */
 
+	/* Login page - Main logo resizing */
 	.btn-logo {
 		width: 350px;
 		height: 350px;
+	}
+	.div-logo {
+		margin: auto;
+		margin-left: 10em;
+	}
 	
-	 }
-	 .div-logo{
-		 margin:auto;
-		 margin-left: 10em;
-		 
-	 }
-	 .containerSignIn, .containerSignUp {
-		 margin: auto;
-		 margin-right: 12em;
-	 }
-	 .form-login, .form-createAcc {
-		 margin:0;
-		 
-	 }
-	 .div-body {
+	/* Logo and Login/Signup container grid */
+	.containerSignIn, .containerSignUp {
+		margin: auto;
+		margin-right: 12em;
+	}
+	.form-login, .form-createAcc {
+		margin: 0;
+	}
+	.div-body {
 		display: grid;
 		/* flex-direction: column; */
 		grid-template-columns: 1fr 1fr;
@@ -1294,9 +1320,8 @@ html {
 		margin-top: 5em;
 	}
 	/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-/* ############################################################# */
-
+	/* ############################################################# */
+	/* ##########DANIEL UPDATES ENDS################################ */
+	/* ############################################################# */
+	/* ############################################################# */
 }
