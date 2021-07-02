@@ -516,6 +516,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// ======================DANIEL UPDATES=============================================
 
+	// Hide Login section and display Sign Up section
 	function displaysignUpSection() {
 		containerSignUp.classList.remove(`hide`)
 		containerSignIn.classList.add(`hide`)
@@ -525,6 +526,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	// ======================DANIEL UPDATES=============================================
 
+	// Hide Sign Up section and display Login section
 	function hidesignUpSection() {
 		containerSignIn.classList.remove(`hide`)
 		containerSignUp.classList.add(`hide`)
@@ -536,6 +538,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	// ======================DANIEL UPDATES=============================================
+
+	// Create new account using Sign Up form
 	function createAccount(e) {
 		e.preventDefault();
 
