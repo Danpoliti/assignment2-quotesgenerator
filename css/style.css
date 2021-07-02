@@ -1086,8 +1086,8 @@ html {
 	/* ############################################################# */
 	/* ############################################################# */
 	.btn-logo {
-		width: 180px;
 		height: 180px;
+		width: 180px;
 	}
 	/* ############################################################# */
 	/* ############################################################# */
@@ -1197,8 +1197,8 @@ html {
 	/* ############################################################# */
 	/* Login page - Main logo resizing */
 	.btn-logo {
-		width: 220px;
 		height: 220px;
+		width: 220px;
 	}
 	.div-logo {
 		margin: auto;
@@ -1213,10 +1213,8 @@ html {
 	/* Logo and Login/Signup container grid */
 	.div-body {
 		display: grid;
-		/* flex-direction: column; */
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-areas: "logo login login";
-		/* margin: 15%; */
 		margin-top: 5em;
 	}
 	/* ############################################################# */
