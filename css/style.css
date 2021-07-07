@@ -1475,6 +1475,41 @@ background-color: rgba(0, 0, 0, 0.089);
 		background-size: 1.5em 1.5em;
 	}
 
+	.galleryContainer {
+		display: flex;
+		gap: 1em;
+		justify-content: space-evenly;
+	}
+	.savePic, .galleryBtn{
+		
+		background-repeat: no-repeat;
+		height:2.4em;
+		width: 10em;
+		cursor: pointer;
+		display: inline-block;
+		/* border: none; */
+		/* position: relative ; */
+		/* border-radius: 0.5em; */
+		/* object-fit: cover; */
+		/* background-position: center center; */
+		background-size: 1.5em 1.5em;
+		text-align: center;
+		padding-top: .1em;
+		padding-bottom: .1em;
+		/* padding-left: .5em; */
+		opacity: 80%;
+	}
+
+	.savePicImg {
+		height: 1.5em;
+			}
+	.galleryPic {
+		height: 1.7em;
+	}
+	.savePic:hover, .galleryBtn:hover{
+		opacity: 100%;
+	}
+
 	/* save quote button */
 	.saveQuoteBtn{
 		background: url("../img/saveHover.svg");
