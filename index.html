@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Random quote</title>
 	<link rel="stylesheet" href="./css/style.css">
-	<!-- <link rel="stylesheet" href="./css/home.css"> -->
 </head>
 
 <body>
@@ -19,14 +18,24 @@
 				<img class="logo" src="./img/logo.svg" alt="open and close quote characters" height="">
 				<h1 class="title"><span>Random</span><span>quotes</span></h1>
 			</section>
-			<div id="dropdownUser" class="dropdownUser">
-				<button type="button" value="userIcon" class="userIcon"></button>
-				<div class="detailsDrop hide">
-					<p class="signedAs">
-						<span>User name</span><span>rcortes1708.rcj@gmail.com</span>
-					</p>
-					<button type="button" value="signOut" class="signOut">Sign out</button>
+			<div class="userHelp">
+				<div id="dropdownUser" class="dropdownUser">
+					<button type="button" value="userIcon" class="userIcon"></button>
+					<div class="detailsDrop hide">
+						<p class="signedAs">
+							<span>User name</span><span>rcortes1708.rcj@gmail.com</span>
+						</p>
+						<button type="button" value="signOut" class="signOut">Sign out</button>
+					</div>
 				</div>
+
+				<div class="tooltipbody ">
+					<button type="button" value="help" class="help">?</button>
+
+					<span class="tooltipSpanHelp" id="tooltipHelp">Help</span>
+				</div>
+
+
 			</div>
 		</header>
 
@@ -35,7 +44,7 @@
 			<div class="quotewraper">
 				<section id="quote-stion" class="quote-stion dispGrid">
 					<!-- Section to generate the quote -->
-					<section class="generate">
+					<section id="generate" class="generate">
 						<header class="quoteHeader">
 							<!-- container for supportedlanguages  -->
 							<div class=selectContainer>
@@ -56,6 +65,11 @@
 								<button type="button" value="createyoursBtn"
 									class="createyoursBtn btnInactive"></button>
 								<span class="tooltipSpan" id="tooltipMakeBtn">Make quotes</span>
+							</div>
+							<div class="tooltipbody">
+								<button type="button" value="uploadPic" id="tooltipPicBtn"
+									class="uploadPic btnInactive"></button>
+								<span class="tooltipSpan" id="tooltipUploadPic">Pic Upload</span>
 							</div>
 
 						</header>
@@ -105,6 +119,26 @@
 							<input type=" text" name="" class="yourname" placeholder="&#42; Enter your name here...">
 						</div>
 					</form>
+					<!-- // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	// ::::::::::::::// star uploasd picture:::::::::::::::::::::
+	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+					<section id="upPicSection" class="hide">
+						<p>Upload your picture quotes</p>
+						<input type="file" accept=".jpg" id="exploreFileBtn"  />
+						<progress max="100" value="0" id="progress"></progress>
+						<label for="">Pictue name:</label>
+						<input type="text" id="picName" disabled/>
+						<button id="submit">Add picture</button>
+						<button type="button" value="openGallery" id="openGallery" class="openGallery">Open
+							galley</button>
+					</section>
+					<!-- // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	// ::::::::::::::// end uploasd picture:::::::::::::::::::::
+	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 				</section>
 			</div>
 
@@ -125,9 +159,10 @@
 					<div class="selectContainer">
 						<!-- order by filter -->
 						<label class="select-label">Order by</label>
-						<select disabled class="orderBy" name="orderBy" id="orderBy">
-							<option value="id">Id</option>
+						<select disabled class="orderBy" name="orderBy" id="orderBy" value"Date">
+							<option value="timestamp">Date</option>
 							<option value="author">Author</option>
+							<option value="quote">Quote</option>
 						</select>
 					</div>
 				</section>
@@ -148,7 +183,7 @@
 			<labelc id="histolabel" class="histolabel">History</label>
 		</div>
 		<section id="userloginsection" class="userloginsection">
-<!-- START ============== DANIEL UPDATES ============== -->
+
 
 			<!--Header with the logo - small size  -->
 			<div class="div-container">
@@ -175,16 +210,18 @@
 							<!-- Hidden alert message: Account created! -->
 							<div class="accCreate-alert hide"><span>Your account was sucessfully created!</span></div>
 							<!-- Hidden alert message: Invalid credentials! -->
-							<div class="invalidCredentials-alert hide"><span>Login/password does not exist/match!</span></div>
-							<p><label for="username">Username:
-									<input type="text" class="username" required>
-								</label>
-							</p>
-							<p>
-								<label for="password">Password:
-									<input type="password" class="password" required>
-								</label>
-							</p>
+							<div class="invalidCredentials-alert hide"><span>Login/password does not exist/match!</span>
+							</div>
+							<div class="logfieldwraper">
+								<label for="username">Username:</label>
+								<input type="text" class="username" required>
+
+							</div>
+							<div class="logfieldwraper">
+								<label for="password">Password:</label>
+								<input type="password" class="password" required>
+
+							</div>
 							<div class="button-box">
 								<input type="button" value="Login" class="signIn">
 								<input type="button" value="Sign Up" class="signUp">
@@ -193,48 +230,123 @@
 					</div>
 					<!-- Sign Up form -->
 					<div id="containerSignUp" class="hide">
-						<form action="" class="form-createAcc" id="formSignUp" >
-							<p>
-								<label for="firstname">First Name:
-									<input type="text" class="firstname" placeholder="Type your first name" id="firstName" required>
-								</label>
-							</p>
-							<p>
-								<label for="lastname">Last Name:
-									<input type="text" class="lastname" placeholder="Type your last name" id="lastName" required>
-								</label>
-							</p>
-							<p>
-								<label for="email">Email:
-									<input type="email" class="email" placeholder="Type your email" id="email" required>
-								</label>
-							</p>
-							<p><label for="username">Username:
-									<input type="text" class="username" placeholder="Type your username" id="userName" required>
-								</label>
-							</p>
-							<p>
-								<label for="password">Password:
-									<input type="password" class="password" placeholder="Type your password" id="password" required>
-								</label>
-							</p>
+						<form action="" class="form-createAcc" id="formSignUp">
+							<div class="logfieldwraper">
+								<label for="firstname">First Name:</label>
+								<input type="text" class="firstname" placeholder="Type your first name" id="firstName"
+									required>
+
+							</div>
+							<div class="logfieldwraper">
+								<label for="lastname">Last Name:</label>
+								<input type="text" class="lastname" placeholder="Type your last name" id="lastName"
+									required>
+
+							</div>
+							<div class="logfieldwraper">
+								<label for="email">Email:</label>
+								<input type="email" class="email" placeholder="Type your email" id="email" required>
+
+							</div>
+							<div class="logfieldwraper">
+								<label for="username">Username:</label>
+								<input type="text" class="username" placeholder="Type your username" id="userName"
+									required>
+							</div>
+							<div class="logfieldwraper">
+								<label for="password">Password:</label>
+								<input type="password" class="password" placeholder="Type your password" id="password"
+									required>
+
+							</div>
 							<div class="button-box">
 								<input type="button" value="Cancel" class="login" id="cancel">
 								<input type="button" value="Create Account" class="createAcc" id="signIn">
-								
 							</div>
 						</form>
 					</div>
 
 				</div>
-				
+
 			</div>
-<!-- END  ============== DANIEL UPDATES ============== -->
 
 		</section>
+
+		<!-- help section  -->
+		<section id="helpSection" class="hide">
+			<!-- help title  -->
+			<h1>How to use this "Random quotes" application</h1>
+			<!-- help conten information  -->
+			<details class="helpDetails">
+				<summary>How to generate a random quote to get inspiration</summary>
+				<img src="./img/help-generate.gif" alt="Animtion to generate a random quote">
+			</details>
+			<details class="helpDetails">
+				<summary>How to create your own quote</summary>
+				<img src="./img/help-create.gif" alt="Animation to create own quote">
+			</details>
+			<details class="helpDetails">
+				<summary>How to open the histoy of saved quotes</summary>
+				<img src="./img/help-history.gif" alt="Animation to open history section">
+			</details>
+			<details class="helpDetails">
+				<summary>How to see a saved quote</summary>
+				<img src="./img/help-see.gif" alt="Animation to see a saved quote">
+			</details>
+			<details class="helpDetails">
+				<summary>How to delete a saved quote</summary>
+				<img src="./img/help-delete.gif" alt="Animation to delete a saved quote">
+			</details>
+		</section>
+
+
+		<!-- // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	// ::::::::::::::// star gallery section:::::::::::::::::::::
+	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+		<section id="gallerySection" class="hide">
+			<button type="button" value="closeGall" id="closeGall" class="closeGall">Close</button>
+			<div id="gallery" class="gallery">
+
+			</div>
+		</section>
+		<!-- // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	// ::::::::::::::// end gallery section:::::::::::::::::::::
+	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 	</main>
+
+	<!-- DB- connection -->
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src=" https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-storage.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyBLX8RJM7CPuCg_zaEF4Hrou-CXfdVFH0g",
+			authDomain: "quotes-e669a.firebaseapp.com",
+			projectId: "quotes-e669a",
+			storageBucket: "quotes-e669a.appspot.com",
+			messagingSenderId: "996086143551",
+			appId: "1:996086143551:web:1deb9ccc3b5a1ec7e3f68a"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+	</script>
+
+
+
+
+
 	<script src="./js/script.js"></script>
-	<!-- <script src="./scripts.js"></script>##################### DELETE THIS, because this directory doesnt really exist-->
 </body>
 
 </html>
