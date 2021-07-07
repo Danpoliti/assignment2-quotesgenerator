@@ -1475,11 +1475,14 @@ background-color: rgba(0, 0, 0, 0.089);
 		background-size: 1.5em 1.5em;
 	}
 
+	/* Save picture and Gallery buttons container */
 	.galleryContainer {
 		display: flex;
 		gap: 1em;
 		justify-content: space-evenly;
 	}
+
+	/* Save Picture and Gallery buttons style */
 	.savePic, .galleryBtn{
 		
 		background-repeat: no-repeat;
@@ -1494,6 +1497,7 @@ background-color: rgba(0, 0, 0, 0.089);
 		opacity: 70%;
 	}
 
+	/* Save Button Image and Gallery Pic Image style */
 	.savePicImg {
 		height: 1.5em;
 			}
