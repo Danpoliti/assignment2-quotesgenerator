@@ -1366,7 +1366,10 @@ background-color: rgba(0, 0, 0, 0.089);
 	width: 270px;
 	height: 270px;
 	grid-template-columns: 1fr;
-	border:0.2em solid rgb(233, 230, 40);
+	border-left:0.3em solid rgb(47, 47, 45);
+	border-top:0.3em solid rgb(47, 47, 45);
+	border-right:0.3em solid rgb(141, 141, 140);
+	border-bottom:0.3em solid rgb(141, 141, 140);
 	gap:var(--pad-gap);
 	position: relative;
 }
@@ -1391,7 +1394,7 @@ background-color: rgba(0, 0, 0, 0.089);
 	height: 100%;
 	object-fit: cover;
 	object-position: center top;
-	border: 0.02em solid red;
+	/* border: 0.02em solid red; */
 	overflow: hidden;
 }
 
