@@ -1335,7 +1335,7 @@ background-color: rgba(0, 0, 0, 0.089);
 }
 
 .gallery{
-	border:0.2em solid black;
+	border:0.2em solid rgb(104, 104, 104);
 	display: grid;
 	gap: var(--pad-gap);
 	justify-content: center;
@@ -1366,10 +1366,10 @@ background-color: rgba(0, 0, 0, 0.089);
 	width: 270px;
 	height: 270px;
 	grid-template-columns: 1fr;
-	border-left:0.3em solid rgb(47, 47, 45);
-	border-top:0.3em solid rgb(47, 47, 45);
-	border-right:0.3em solid rgb(141, 141, 140);
-	border-bottom:0.3em solid rgb(141, 141, 140);
+	border-left:0.3em solid rgb(116, 116, 115);
+	border-top:0.3em solid rgb(77, 77, 75);
+	border-right:0.3em solid rgb(167, 167, 166);
+	border-bottom:0.3em solid rgb(207, 207, 207);
 	gap:var(--pad-gap);
 	position: relative;
 }
