@@ -1487,16 +1487,10 @@ background-color: rgba(0, 0, 0, 0.089);
 		width: 10em;
 		cursor: pointer;
 		display: inline-block;
-		/* border: none; */
-		/* position: relative ; */
-		/* border-radius: 0.5em; */
-		/* object-fit: cover; */
-		/* background-position: center center; */
 		background-size: 1.5em 1.5em;
 		text-align: center;
 		padding-top: .1em;
 		padding-bottom: .1em;
-		/* padding-left: .5em; */
 		opacity: 70%;
 	}
 
