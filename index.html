@@ -23,7 +23,7 @@
 					<button type="button" value="userIcon" class="userIcon"></button>
 					<div class="detailsDrop hide">
 						<p class="signedAs">
-							<span>User name</span><span>rcortes1708.rcj@gmail.com</span>
+							<span>User name</span><span id="userLogged">EMail</span>
 						</p>
 						<button type="button" value="signOut" class="signOut">Sign out</button>
 					</div>
@@ -125,7 +125,7 @@
 	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 					<section id="upPicSection" class="hide">
-						<p>Upload your picture quotes</p>
+						<p>Upload your picture quotes (to share to the bank of quotes)</p>
 						<input type="file" accept=".jpg" id="exploreFileBtn"  />
 						<progress max="100" value="0" id="progress"></progress>
 						<label for="">Pictue name:</label>
@@ -215,13 +215,13 @@
 							<div class="invalidCredentials-alert hide"><span>Login/password does not exist/match!</span>
 							</div>
 							<div class="logfieldwraper">
-								<label for="username">Username:</label>
-								<input type="text" class="username" required>
+								<label for="username">Email:</label>
+								<input type="text" class="username" id="loginEmail" required>
 
 							</div>
 							<div class="logfieldwraper">
 								<label for="password">Password:</label>
-								<input type="password" class="password" required>
+								<input type="password" class="password" id="loginPassword" required>
 
 							</div>
 							<div class="button-box">

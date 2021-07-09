@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	const formCreateQuoteSec = document.querySelector('#form-CreateQuote')
 	const upPicSectionSec = document.querySelector('#upPicSection')
 
-
+	const loginEmail = document.querySelector('#loginEmail')
+	const loginPassword = document.querySelector('#loginPassword')
 
 	//list of language supported
 	const languages = [
@@ -148,6 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					author: authorName,
 					quote: contentQuote,
 					timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+					uID: firebase.auth().currentUser.uid
 				})
 				.then(function (docRef) {
 					console.log("Document written with ID:", docRef.id);
@@ -189,8 +191,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		// populate the result of saved quotes
 		/* container to display history of saved quotes  */
 		const quoteTable = document.querySelector(`.historicalResult`)
-
+		
+console.log(firebase.auth().currentUser.uid)
 		db.collection("Quote")
+			
+			.where("uID","==", firebase.auth().currentUser.uid)
 			.orderBy(`${orderBy.value}`, "asc")
 			.onSnapshot(function (querySnapshot) {
 				notifyEmpy(querySnapshot.size)
@@ -509,6 +514,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// hide sign in and sign out section
 	// display quote and history section
 	function hidesignUserSection() {
+		
 		subcontainer.classList.remove(`hide`)
 		openHistoContainer.classList.remove(`hide`)
 		mainHeader.classList.remove(`hide`)
@@ -520,6 +526,65 @@ document.addEventListener("DOMContentLoaded", function () {
 		userloginsection.classList.remove(`userloginsection`)
 	}
 
+	function LoginUser(){
+		//console.log('IN')
+		firebase.auth().onAuthStateChanged(function (user) {
+			if (user){
+				hidesignUserSection();
+				document.querySelector('#userLogged').innerHTML = user.email;
+				LoadListQuote();
+			}
+			else
+				displaysignUserSection();
+		});
+	}
+
+	function SignOut(){
+		console.log('OUT')
+		
+		firebase.auth().signOut()
+		//displaysignUserSection();
+	}
+	
+
+	function validLogin () {
+
+ 		if(loginEmail.value !== '' && loginPassword.value !== ''){
+ 			firebase
+			 	.auth()
+			 	.signInWithEmailAndPassword(loginEmail.value, loginPassword.value)
+   				.then((userCredential) => {
+				     var user = userCredential.user;
+					 
+					 loginEmail.value = ''
+	 	 			 loginPassword.value = ''
+					   
+					   //LoginUser();
+					   //hidesignUserSection();
+
+				})
+				.catch((error) => {
+					alert(error.message)
+				});
+		 }else
+		 	alert('Please type your email and password!')
+		 
+
+
+		 
+	
+//   hidesignUserSection();
+// 		} else {
+// 			document.querySelector(`.username`).classList.add(`alertFieldEmpty`)
+// 			document.querySelector(`.password`).classList.add(`alertFieldEmpty`)
+
+// 			setTimeout(function () {
+// 				document.querySelector(`.username`).classList.remove(`alertFieldEmpty`)
+// 				document.querySelector(`.password`).classList.remove(`alertFieldEmpty`)
+// 			}, 3000);
+// 		}
+		// hidesignUserSection();
+	}
 	// make enter key work as  "save quote" button
 	yourname.addEventListener("keydown", function (event) {
 		if (event.keyCode == 13) {
@@ -683,7 +748,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			uid: userName,
 			timestamp: firebase.firestore.FieldValue.serverTimestamp(),
 		}).then(function (docRef){
-			console.log("Contact Us message written with ID:",docRef.id);
+			console.log("User created with ID:",docRef.id);
 		}).catch(function (error){
 			console.error("Error sending your message",error);
 		});
@@ -771,8 +836,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	uploadPic.addEventListener(`mouseout`, function () { hideBtnTooltip(uploadPic) })
 	help.addEventListener(`click`, displayHelp)
 	document.querySelector(`.userIcon`).addEventListener(`click`, toggleSignout)
-	document.querySelector(`.signOut`).addEventListener(`click`, displaysignUserSection)
-	document.querySelector(`.signIn`).addEventListener(`click`, hidesignUserSection)
+	document.querySelector(`.signOut`).addEventListener(`click`, SignOut)
+	document.querySelector(`.signIn`).addEventListener(`click`, validLogin)
 	document.querySelector(`.signUp`).addEventListener(`click`, displaysignUpSection)
 	document.querySelector(`#cancel`).addEventListener(`click`, hidesignUpSection)
 	document.querySelector(`.createAcc`).addEventListener(`click`, createAccount)
@@ -782,7 +847,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// call  list the languages suported 
 	listLangSupported()
-	LoadListQuote()
+	//LoadListQuote()
 
 
 
@@ -970,7 +1035,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	closeGall.addEventListener(`click`, closeGallery)
 	openGallery.addEventListener(`click`, displayGallery)
 
-
+	LoginUser();
 	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	// ::::::::::::::// end fuctions for gallery section:::::::::::::::::::::
