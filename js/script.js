@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const upPicSectionSec = document.querySelector('#upPicSection')
 
 
+
 	//list of language supported
 	const languages = [
 		{ value: 'en', lan: 'English' },
@@ -586,26 +587,52 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.getElementById('formSignUp').reset();
 	}
 
-
+	// function addUser(uid, first, last) {
+	// 	db.collection("Users")
+	// 		.doc(uid)
+	// 		.set({
+	// 			firstname: first,
+	// 			lastname: last,
+	// 			user: uid,
+	// 			timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+	// 		})
+	// 		.then(function () {
+	// 			console.log("User added to database!");
+	// 		})
+	// 		.catch(function (error) {
+	// 			console.error(error);
+	// 		});
+	// }
 
 	// Create new account using Sign Up form
 	function createAccount(e) {
 		e.preventDefault();
 
-		const firstName = document.getElementById('firstName').value;
-		const lastName = document.getElementById('lastName').value;
-		const email = document.getElementById('email').value;
-		const userName = document.getElementById('userName').value;
-		const password = document.getElementById('password').value;
+		const firstName = getInputVal('firstName');
+		const lastName = getInputVal('lastName');
+		const email = getInputVal('email');
+		const userName = getInputVal('userName');
+		const password = getInputVal('password');
+
+
 
 		if (firstName.trim() != "" && lastName.trim() != "" && email.trim() != "" && userName.trim() != "" && password.trim() != "") {
-			let accountData = {
-				firstName: firstName,
-				lastName: lastName,
-				Email: email,
-				Username: userName,
-				Password: password
-			}
+
+				firebase
+					.auth()
+					.createUserWithEmailAndPassword(email, password)
+					.then(function (data) {
+						console.log("User created!",data)
+						const user = firebase.auth().currentUser;
+
+						saveMessage(firstName, lastName, user.uid);
+
+					})
+					.catch(function (error) {
+						console.error(error);
+					});
+				
+				
 
 			console.log(`First Name: ${firstName}`)
 			console.log(`Last Name: ${lastName}`)
@@ -645,6 +672,50 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 
+	function getInputVal(id){
+		return document.getElementById(id).value;
+	}
+
+	function saveMessage(firstName, lastName, userName){
+		db.collection("Users").add({
+			fname: firstName,
+			lname: lastName,
+			uid: userName,
+			timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+		}).then(function (docRef){
+			console.log("Contact Us message written with ID:",docRef.id);
+		}).catch(function (error){
+			console.error("Error sending your message",error);
+		});
+	
+	
+	   
+	}
+// function register() {
+// 	console.log("testando123")
+
+// 	const firstname = document.getElementById("firstName");
+// 	const lastname = document.getElementById("lastName");
+// 	const email = document.getElementById("email");
+// 	const password = document.getElementById("password");
+
+
+// 		if (email.value && password.value) {
+// 			firebase
+// 				.auth()
+// 				.createUserWithEmailAndPassword(email.value, password.value)
+// 				.then(function (data) {
+// 					console.log("auth")
+// 					// const user = firebase.auth().currentUser;
+
+// 					// addUser(user.uid, firstname.value, lastname.value);
+// 				})
+// 				.catch(function (error) {
+// 					console.error(error);
+// 				});
+// 			}
+
+// }
 
 	function showUpPictureSection() {
 
@@ -705,6 +776,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	document.querySelector(`.signUp`).addEventListener(`click`, displaysignUpSection)
 	document.querySelector(`#cancel`).addEventListener(`click`, hidesignUpSection)
 	document.querySelector(`.createAcc`).addEventListener(`click`, createAccount)
+	// document.querySelector(`#signIn`).addEventListener(`click`, register)
 
 	uploadPic.addEventListener(`click`, showUpPictureSection)
 
