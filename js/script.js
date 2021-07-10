@@ -531,8 +531,8 @@ console.log(firebase.auth().currentUser.uid)
 		userloginsection.classList.remove(`userloginsection`)
 	}
 
+	// Hide login page and set the current user name to the main page
 	function LoginUser(){
-		//console.log('IN')
 		firebase.auth().onAuthStateChanged(function (user) {
 			if (user){
 				hidesignUserSection();
@@ -544,6 +544,7 @@ console.log(firebase.auth().currentUser.uid)
 		});
 	}
 
+	// sign out from the app back to the login page
 	function SignOut(){
 		console.log('OUT')
 		
@@ -551,7 +552,7 @@ console.log(firebase.auth().currentUser.uid)
 		//displaysignUserSection();
 	}
 	
-
+// credentials validation when login attempt
 	function validLogin () {
 
  		if(loginEmail.value !== '' && loginPassword.value !== ''){
