@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.querySelector(`.q-open`).innerHTML = `"`
 		document.querySelector(`.q-close`).innerHTML = `"`
 		document.querySelector(`.cite`).innerHTML = name
+		
 	}
 
 
@@ -107,6 +108,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		formCreateQuote.classList.remove(`form-CreateQuote`)
 		result.classList.remove(`hide`)
 		result.classList.add(`result`)
+		upPicSectionSec.classList.add(`hide`)
+		upPicSectionSec.classList.remove(`upPicSection`)
 	}
 
 
@@ -119,6 +122,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		formCreateQuote.classList.add(`form-CreateQuote`)
 		result.classList.add(`hide`)
 		result.classList.remove(`result`)
+		upPicSectionSec.classList.add(`hide`)
+		upPicSectionSec.classList.remove(`upPicSection`)
 		enableDisableLanguage(languageActive)
 	}
 
@@ -795,6 +800,7 @@ console.log(firebase.auth().currentUser.uid)
 			resultSec.classList.remove(`result`)
 			formCreateQuoteSec.classList.remove(`form-CreateQuote`)
 			upPicSectionSec.classList.add(`upPicSection`)
+
 			
 		} else {
 			upPicSectionSec.classList.add(`hide`)
