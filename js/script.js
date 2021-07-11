@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const containerSignIn = document.querySelector(`#containerSignIn`)
 	const uploadPic = document.querySelector(`.uploadPic`)
 
-	const generateSec = document.querySelector('#generate')
+	// const generateSec = document.querySelector('#generate')
 	const resultSec = document.querySelector('#result')
 	const formCreateQuoteSec = document.querySelector('#form-CreateQuote')
 	const upPicSectionSec = document.querySelector('#upPicSection')
@@ -486,7 +486,7 @@ console.log(firebase.auth().currentUser.uid)
 		detailsDrop.classList.toggle(`hide`)
 	}
 
-
+	
 	window.addEventListener('click', function (e) {
 		if (detailsDrop.classList.contains(`flexx`)) {
 			if (!(document.querySelector('.detailsDrop').contains(e.target))
@@ -658,22 +658,6 @@ console.log(firebase.auth().currentUser.uid)
 		document.getElementById('formSignUp').reset();
 	}
 
-	// function addUser(uid, first, last) {
-	// 	db.collection("Users")
-	// 		.doc(uid)
-	// 		.set({
-	// 			firstname: first,
-	// 			lastname: last,
-	// 			user: uid,
-	// 			timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-	// 		})
-	// 		.then(function () {
-	// 			console.log("User added to database!");
-	// 		})
-	// 		.catch(function (error) {
-	// 			console.error(error);
-	// 		});
-	// }
 
 	// Create new account using Sign Up form
 	function createAccount(e) {
@@ -762,35 +746,10 @@ console.log(firebase.auth().currentUser.uid)
 	
 	   
 	}
-// function register() {
-// 	console.log("testando123")
 
-// 	const firstname = document.getElementById("firstName");
-// 	const lastname = document.getElementById("lastName");
-// 	const email = document.getElementById("email");
-// 	const password = document.getElementById("password");
-
-
-// 		if (email.value && password.value) {
-// 			firebase
-// 				.auth()
-// 				.createUserWithEmailAndPassword(email.value, password.value)
-// 				.then(function (data) {
-// 					console.log("auth")
-// 					// const user = firebase.auth().currentUser;
-
-// 					// addUser(user.uid, firstname.value, lastname.value);
-// 				})
-// 				.catch(function (error) {
-// 					console.error(error);
-// 				});
-// 			}
-
-// }
 
 	function showUpPictureSection() {
 
-		// const uploadScreen = document.getElementById('upPicSection')
 
 		if(upPicSectionSec.classList.contains('hide')){
 
@@ -812,9 +771,6 @@ console.log(firebase.auth().currentUser.uid)
 		}
 
 	}
-
-
-
 
 
 
@@ -848,21 +804,15 @@ console.log(firebase.auth().currentUser.uid)
 	document.querySelector(`.signUp`).addEventListener(`click`, displaysignUpSection)
 	document.querySelector(`#cancel`).addEventListener(`click`, hidesignUpSection)
 	document.querySelector(`.createAcc`).addEventListener(`click`, createAccount)
-	// document.querySelector(`#signIn`).addEventListener(`click`, register)
 
 	uploadPic.addEventListener(`click`, showUpPictureSection)
 
 	// call  list the languages suported 
 	listLangSupported()
-	//LoadListQuote()
 
 
-
-
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	// ::::::::::::::// start fireSTORE connection:::::::::::::::::::::
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -1000,18 +950,15 @@ console.log(firebase.auth().currentUser.uid)
 
 
 	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	// ::::::::::::::// end fireSTORE connection:::::::::::::::::::::
 	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	// ::::::::::::::// start fuctions for gallery section:::::::::::::::::::::
 	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 
 	const openGallery = document.querySelector(`#openGallery`)
@@ -1043,10 +990,9 @@ console.log(firebase.auth().currentUser.uid)
 	openGallery.addEventListener(`click`, displayGallery)
 
 	LoginUser();
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	// ::::::::::::::// end fuctions for gallery section:::::::::::::::::::::
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
