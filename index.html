@@ -19,6 +19,7 @@
 				<h1 class="title"><span>Random</span><span>quotes</span></h1>
 			</section>
 			<div class="userHelp">
+				<!-- Dropdown menu to show the user and logout -->
 				<div id="dropdownUser" class="dropdownUser">
 					<button type="button" value="userIcon" class="userIcon"></button>
 					<div class="detailsDrop hide">
@@ -28,7 +29,7 @@
 						<button type="button" value="signOut" class="signOut">Sign out</button>
 					</div>
 				</div>
-
+				<!-- Help Button and application tutorial -->
 				<div class="tooltipbody ">
 					<button type="button" value="help" class="help">?</button>
 
@@ -66,6 +67,7 @@
 									class="createyoursBtn btnInactive"></button>
 								<span class="tooltipSpan" id="tooltipMakeBtn">Make quotes</span>
 							</div>
+							<!-- Button to upload quote pics -->
 							<div class="tooltipbody">
 								<button type="button" value="uploadPic" id="tooltipPicBtn"
 									class="uploadPic btnInactive"></button>
@@ -119,11 +121,8 @@
 							<input type=" text" name="" class="yourname" placeholder="&#42; Enter your name here...">
 						</div>
 					</form>
-					<!-- // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// ::::::::::::::// star uploasd picture:::::::::::::::::::::
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+					<!-- Upload pictures form -->
 					<section id="upPicSection" class="hide">
 						<p>Upload your picture quotes (to share to the bank of quotes)</p>
 						<input type="file" accept=".jpg" id="exploreFileBtn"  />
@@ -131,16 +130,14 @@
 						<label for="">Pictue name:</label>
 						<input type="text" id="picName" disabled/>
 						<div class="galleryContainer">
+							<!-- Buttons to save picture and access gallery -->
 							<button id="submit" class="savePic"><img src="./img/saveHover.svg" alt="" class="savePicImg"> Save picture</button>
 							<button type="button" value="openGallery" id="openGallery" class="galleryBtn"><img src="./img/gallery.svg" alt="" class="galleryPic"> Open
-								galley</button>
+								gallery</button>
 							</div>
 					</section>
-					<!-- // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// ::::::::::::::// end uploasd picture:::::::::::::::::::::
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+					
 				</section>
 			</div>
 
@@ -234,27 +231,32 @@
 					<div id="containerSignUp" class="hide">
 						<form action="" class="form-createAcc" id="formSignUp">
 							<div class="logfieldwraper">
+								<!-- Type your First name -->
 								<label for="firstname">First Name:</label>
 								<input type="text" class="firstname" placeholder="Type your first name" id="firstName"
-									>
-
+								>
+								
 							</div>
+							<!-- Type your Last Name -->
 							<div class="logfieldwraper">
 								<label for="lastname">Last Name:</label>
 								<input type="text" class="lastname" placeholder="Type your last name" id="lastName"
-									>
-
+								>
+								
 							</div>
+							<!-- Type your Email -->
 							<div class="logfieldwraper">
 								<label for="email">Email:</label>
 								<input type="email" class="email" placeholder="Type your email" id="email" required>
-
+								
 							</div>
+							<!-- Type your Username -->
 							<div class="logfieldwraper">
 								<label for="username">Username:</label>
 								<input type="text" class="username" placeholder="Type your username" id="userName"
-									required>
+								required>
 							</div>
+							<!-- Type your Password -->
 							<div class="logfieldwraper">
 								<label for="password">Password:</label>
 								<input type="password" class="password" placeholder="Type your password" id="password"
@@ -302,22 +304,14 @@
 		</section>
 
 
-		<!-- // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// ::::::::::::::// star gallery section:::::::::::::::::::::
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+		<!-- Gallery section to see all the picture quotes uploaded -->
 		<section id="gallerySection" class="hide">
 			<button type="button" value="closeGall" id="closeGall" class="closeGall">Close</button>
 			<div id="gallery" class="gallery">
 
 			</div>
 		</section>
-		<!-- // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// ::::::::::::::// end gallery section:::::::::::::::::::::
-	// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
 	</main>
 
 	<!-- DB- connection -->
